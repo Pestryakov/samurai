@@ -1,0 +1,71 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Убираем стандартные точки у списка */
+.task-list {
+  list-style: none;     /* ← главное: убирает точки */
+  padding: 0;
+  margin: 0;
+}
+
+/* Каждая задача — карточка с чёрной обводкой 2px */
+.task-item {
+  border: 2px solid black;      /* ← чёрная обводка 2px */
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+}
+
+/* Строки внутри задачи — выравнивание по левому краю */
+.task-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: left;   
+  color: black;         /* выравнивание текста по левому краю */
+}
+
+.task-row:last-child {
+  margin-bottom: 0;
+}
+
+.task-row strong {
+  width: 140px;                 /* фиксированная ширина для меток */
+  flex-shrink: 0;
+  color: #333;
+}
+
+.checkbox {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: default;
+}
+
+.status-text {
+  color: #555;
+  font-weight: 500;
+}
+
+.done-title {
+  text-decoration: line-through;
+  opacity: 0.7;           /* дополнительно — сделать чуть бледнее */
+  color: #666;            /* можно изменить цвет, если хочешь */
+}
+
+.priority-low      { background-color: #ffffff; } /* белый */
+.priority-medium   { background-color: #ffd7b5; } /* светло-персиковый */
+.priority-high     { background-color: #ffb38a; } /* персиковый */
+.priority-urgent   { background-color: #ff9248; } /* оранжевый */
+.priority-critical { background-color: #ff6700; } /* ярко-оранжевый */
